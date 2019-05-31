@@ -41,7 +41,9 @@ export default class Signup extends React.Component {
       <div className='mother3'>
 
         <div className='container3'>
-          <h1 classname='signup3'> sign up</h1>
+          <div className='Signup3'>
+          <h1 > sign up</h1>
+          </div>
 
           <input className='inp3' placeholder='email' name='email' onChange={(e) => this.handlechange(e)} />
 

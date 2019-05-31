@@ -409,9 +409,10 @@ border: 1px solid #e69a38;;
   width: 15px;
   border-radius: 7.5px
 }
-.signup3{
+.Signup3{
   display: flex;
 flex-direction: row;
+align-items: center;
 justify-content: center;
 color: wheat;
 }
