@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-export default class Signup extends React.Component {
+import {withRouter} from 'react-router'
+ class Signup extends React.Component {
   constructor (props) {
     super(props)
 
@@ -23,12 +24,14 @@ export default class Signup extends React.Component {
         email: this.state.email,
         password: this.state.password
       })
-        .then(function (response) {
+        .then((response) => {
           console.log('response', response)
           window.localStorage.setItem('token', response.data.token)
           window.localStorage.setItem('id', response.data.id)
+          this.props.history.push('./Massenger')
+
         })
-        .catch(function (error) {
+        .catch( (error)=> {
           console.log('errrror', error)
         })
     } else {
@@ -65,3 +68,4 @@ export default class Signup extends React.Component {
     )
   }
 }
+export default withRouter(Signup)
